@@ -2,27 +2,19 @@
 
 internal class BaseBankAccount
 {
-    public string Name { get; set; }
+    public string AccountName { get; set; }
     public double Balance { get; set; }
-    public string Email { get; set; }
-    public int CustomerNumber { get; set; }
 
-    public BaseBankAccount(string name, double balance, string email, int customerNumber)
+    // should this be have a parameter that specifies whether they want to get the balance from savings or current?
+    public string GetAccountName()
     {
-        Name = name;
-        Balance = balance;
-        Email = email;
-        CustomerNumber = customerNumber;
+        Console.WriteLine($"Account Name: {AccountName}");
+        return AccountName;
     }
 
-    public void PersonalDetails()
+    public double GetBalance()
     {
-        Console.WriteLine($"Account Holder: {Name}, Email: {Email}");
-    }
-
-    // should this be have a parameter tat specifies whether they want to get the balance from savings or current?
-    public void GetBalance()
-    {
-        Console.WriteLine($"Current Balance: {Balance:C}");
+        Console.WriteLine($"Balance: {Balance:C}");
+        return Balance;
     }
 }

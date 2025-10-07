@@ -1,0 +1,24 @@
+﻿So we need a new a console app but i would like you to start with a github repo.
+ 
+within that we need to make a branch called main. 
+ 
+Then take a feature branch off of main. 
+ 
+Then the next task is inheritance: 
+ 
+I would like 3 classes creating :
+ 
+BaseBankAccount, CurrentAccount, SavingsAccount. 
+ 
+The base bank account should have more common methods functions such as GetBalance() and Balance as these are used by all types of accounts. 
+ 
+The classes CurrentAccount and SavingsAccount should inherit the BaseBankAccountClass
+ 
+A list of multiple accounts should be made
+ 
+This list is then looped though and the balance is displayed for each account, including the account name 
+ 
+Once the task is done i want you to make a pull request and put that link here. 
+ 
+note: we want to ensure all classes are in separate files, named correctly. 
+note: if you havent done inheritance a go before - give it a try first, but be sure to timebox it

@@ -4,15 +4,34 @@ class Program
 {
     static void Main(string[] args)
     {
-        BaseBankAccount account1 = new BaseBankAccount("Mic", 1234.0, "Mic@email.com", 123456);
-        BaseBankAccount account2 = new BaseBankAccount("Oli", 2345.0, "Oli@email.com", 234567);
-        BaseBankAccount account3 = new BaseBankAccount("Ben", 3456.0, "Ben@email.com", 345678);
+        List<BaseBankAccount> accounts = new List<BaseBankAccount>();
 
-        var accounts = new List<BaseBankAccount> { account1, account2, account3 };
+        var CurrentAccount = new CurrentAccount();
+        CurrentAccount.AccountName = "CurrentAccount1";
+        CurrentAccount.Balance = 2400.19;
+        accounts.Add(CurrentAccount);
 
-        for (int i = 0; i < accounts.Count; i++)
+        var CurrentAccount2 = new CurrentAccount();
+        CurrentAccount2.AccountName = "CurrentAccount2";
+        CurrentAccount2.Balance = 1200.59;
+        accounts.Add(CurrentAccount2);
+
+        var SavingsAccount = new SavingsAccount();
+        SavingsAccount.AccountName = "SavingsAccount1";
+        SavingsAccount.Balance = 2300.71;
+        accounts.Add(SavingsAccount);
+
+        var SavingsAccount2 = new SavingsAccount();
+        SavingsAccount2.AccountName = "SavingsAccount2";
+        SavingsAccount2.Balance = 9100.28;
+        accounts.Add(SavingsAccount2);
+
+        foreach (var account in accounts)
         {
-            accounts[i].PersonalDetails();
+            account.GetAccountName();
+            account.GetBalance();
+            Console.WriteLine();
         }
     }
+
 }
