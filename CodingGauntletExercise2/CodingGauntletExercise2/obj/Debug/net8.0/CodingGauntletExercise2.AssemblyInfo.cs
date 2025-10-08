@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodingGauntletExercise2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b172baeab77baf027f9b676f6ea833bf1882dee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a4765b2d699ba7a93ccadcc2a909638f0517540")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodingGauntletExercise2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodingGauntletExercise2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

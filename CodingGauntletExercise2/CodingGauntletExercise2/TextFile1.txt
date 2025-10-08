@@ -22,3 +22,32 @@ Once the task is done i want you to make a pull request and put that link here.
  
 note: we want to ensure all classes are in separate files, named correctly. 
 note: if you havent done inheritance a go before - give it a try first, but be sure to timebox it
+
+Part 3:
+Linq 
+ 
+1) Where balance > 2000
+2) Where Balance < 2000
+3) first/firstordefault
+ 
+What is the difference?
+1 - Returns all the accounts where the balance is greater than 2000
+2 - Returns all the accounts where the balance is less than 2000
+3 - First returns the first account that matches the criteria, if none found it throws an exception. FirstOrDefault returns the first account that matches the criteria, if none found it returns null (or default value for value types).
+ 
+single account with specific account name using that 
+ 
+Seperatley 
+Order by account balance Ascending
+Order by account balance Decending
+ 
+All should be new lists 
+ 
+Loop through and display each one 
+ 
+Example:
+ConsoleWriteline(----------Ordered Desc ----------------); 
+// loop code to display
+ConsoleWriteline(----------end ----------------); 
+ 
+Needs to be in a feature branch taken off of main. 
