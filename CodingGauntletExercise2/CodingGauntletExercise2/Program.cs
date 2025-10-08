@@ -26,56 +26,20 @@ class Program
         SavingsAccount2.Balance = 9100.28;
         accounts.Add(SavingsAccount2);
 
-        var filteredAccountsGreaterThan2000 = accounts.Where(account => account.Balance > 2000).ToList();
-        var filteredAccountsLessThan2000 = accounts.Where(account => account.Balance < 2000).ToList();
-        var filteredAccountsFirstOrDefault = accounts.FirstOrDefault(account => account.Balance < 2000);
+        var filteredAccountsGreaterThan2000 = Filtering.GreaterThan(accounts, 2000);
+        var filteredAccountsLessThan2000 = Filtering.LessThan(accounts, 2000);
+        var filteredAccountsFirstOrDefault = Filtering.FirstOrDefault(accounts, 2000);
+
 
         //Greater Than 2000
-
-        var filteredAccountsGreaterThan2000Asc = filteredAccountsGreaterThan2000.OrderBy(account => account.Balance);
-        var filteredAccountsGreaterThan2000Dec = filteredAccountsGreaterThan2000.OrderByDescending(account => account.Balance);
-
-        Console.WriteLine("----------Greater Than 2000----------------");
-        Console.WriteLine("(----------Ordered Desc----------------);");
-        foreach (var account in filteredAccountsGreaterThan2000Dec)
-        {
-            Console.WriteLine($"{account.AccountName}: {account.Balance}");
-            Console.WriteLine();
-        }
-        Console.WriteLine("----------end----------------");
-        Console.WriteLine();
-
-        Console.WriteLine("(----------Ordered Asc----------------);");
-        foreach (var account in filteredAccountsGreaterThan2000Asc)
-        {
-            Console.WriteLine($"{account.AccountName}: {account.Balance}");
-            Console.WriteLine();
-        }
-        Console.WriteLine("----------end----------------");
-        Console.WriteLine();
-
+        string titleText = "Greater Than 2000";
+        var filteredAccountsGreaterThan2000Asc = Ordering.Ascending(filteredAccountsGreaterThan2000, titleText);
+        var filteredAccountsGreaterThan2000Dec = Ordering.Descending(filteredAccountsGreaterThan2000, titleText);
 
         //Less Than 2000
-        var filteredAccountsLessThan2000Asc = filteredAccountsLessThan2000.OrderBy(account => account.Balance);
-        var filteredAccountsLessThan2000Dec = filteredAccountsLessThan2000.OrderByDescending(account => account.Balance);
-
-        Console.WriteLine("----------Less Than 2000----------------");
-        Console.WriteLine("(----------Ordered Desc----------------);");
-        foreach (var account in filteredAccountsLessThan2000Dec)
-        {
-            Console.WriteLine($"{account.AccountName}: {account.Balance}");
-            Console.WriteLine();
-        }
-        Console.WriteLine("----------end----------------");
-        Console.WriteLine();
-
-        Console.WriteLine("(----------Ordered Asc----------------);");
-        foreach (var account in filteredAccountsLessThan2000Asc)
-        {
-            Console.WriteLine($"{account.AccountName}: {account.Balance}");
-            Console.WriteLine();
-        }
-        Console.WriteLine("----------end----------------");
+        string titleText2 = "Less Than 2000";
+        var filteredAccountsLessThan2000Asc = Ordering.Ascending(filteredAccountsLessThan2000, titleText2);
+        var filteredAccountsLessThan2000Dec = Ordering.Descending(filteredAccountsLessThan2000, titleText2);
 
         foreach (var account in accounts)
         {
