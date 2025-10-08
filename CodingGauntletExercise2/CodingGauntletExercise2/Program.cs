@@ -26,6 +26,57 @@ class Program
         SavingsAccount2.Balance = 9100.28;
         accounts.Add(SavingsAccount2);
 
+        var filteredAccountsGreaterThan2000 = accounts.Where(account => account.Balance > 2000).ToList();
+        var filteredAccountsLessThan2000 = accounts.Where(account => account.Balance < 2000).ToList();
+        var filteredAccountsFirstOrDefault = accounts.FirstOrDefault(account => account.Balance < 2000);
+
+        //Greater Than 2000
+
+        var filteredAccountsGreaterThan2000Asc = filteredAccountsGreaterThan2000.OrderBy(account => account.Balance);
+        var filteredAccountsGreaterThan2000Dec = filteredAccountsGreaterThan2000.OrderByDescending(account => account.Balance);
+
+        Console.WriteLine("----------Greater Than 2000----------------");
+        Console.WriteLine("(----------Ordered Desc----------------);");
+        foreach (var account in filteredAccountsGreaterThan2000Dec)
+        {
+            Console.WriteLine($"{account.AccountName}: {account.Balance}");
+            Console.WriteLine();
+        }
+        Console.WriteLine("----------end----------------");
+        Console.WriteLine();
+
+        Console.WriteLine("(----------Ordered Asc----------------);");
+        foreach (var account in filteredAccountsGreaterThan2000Asc)
+        {
+            Console.WriteLine($"{account.AccountName}: {account.Balance}");
+            Console.WriteLine();
+        }
+        Console.WriteLine("----------end----------------");
+        Console.WriteLine();
+
+
+        //Less Than 2000
+        var filteredAccountsLessThan2000Asc = filteredAccountsLessThan2000.OrderBy(account => account.Balance);
+        var filteredAccountsLessThan2000Dec = filteredAccountsLessThan2000.OrderByDescending(account => account.Balance);
+
+        Console.WriteLine("----------Less Than 2000----------------");
+        Console.WriteLine("(----------Ordered Desc----------------);");
+        foreach (var account in filteredAccountsLessThan2000Dec)
+        {
+            Console.WriteLine($"{account.AccountName}: {account.Balance}");
+            Console.WriteLine();
+        }
+        Console.WriteLine("----------end----------------");
+        Console.WriteLine();
+
+        Console.WriteLine("(----------Ordered Asc----------------);");
+        foreach (var account in filteredAccountsLessThan2000Asc)
+        {
+            Console.WriteLine($"{account.AccountName}: {account.Balance}");
+            Console.WriteLine();
+        }
+        Console.WriteLine("----------end----------------");
+
         foreach (var account in accounts)
         {
             account.GetAccountName();
