@@ -9,11 +9,9 @@ internal class Ordering
         Console.WriteLine("(----------Ordered Desc----------------)");
         foreach (var account in orderedAccounts)
         {
-            Console.WriteLine($"{account.AccountName}: {account.Balance}");
-            Console.WriteLine();
+            Console.WriteLine($"{account.AccountName}: {account.Balance}\n");
         }
-        Console.WriteLine("----------end----------------");
-        Console.WriteLine();
+        Console.WriteLine("----------end----------------\n");
         return orderedAccounts;
     }
     public static List<BaseBankAccount> Descending(List<BaseBankAccount> accounts, string titleText)
@@ -23,11 +21,9 @@ internal class Ordering
         Console.WriteLine("(----------Ordered Asc----------------)");
         foreach (var account in orderedAccounts)
         {
-            Console.WriteLine($"{account.AccountName}: {account.Balance}");
-            Console.WriteLine();
+            Console.WriteLine($"{account.AccountName}: {account.Balance}\n");
         }
-        Console.WriteLine("----------end----------------");
-        Console.WriteLine();
+        Console.WriteLine("----------end----------------\n");
         return orderedAccounts;
     }
 }
